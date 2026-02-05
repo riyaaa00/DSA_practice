@@ -69,13 +69,54 @@ import java.util.*;
         // for(int i=0; i<result.length(); i++){
         //     System.out.print("string result is :"+result.charAt(i));
         // }
-public class dsa{
-    public static void main(String args[]){
-        Scanner sc =new Scanner(System.in);
-        String a =sc.nextLine();
-        StringBuilder sb =new StringBuilder(a);
+// public class dsa{
+//     public static void main(String args[]){
+//         Scanner sc =new Scanner(System.in);
+//         String a =sc.nextLine();
+//         System.out.print("string a is :"+ a);
+//         String result="";
         
-        
+//         for(int i=0; i<a.length(); i++){
+//             if(a.charAt(i)=='e'){
+//                 result= result +'i';
 
+                
+//             }
+//             else{
+//                 result =result+ a.charAt(i);
+//             }
+//         }
+//         System.out.println(" ");
+//         System.out.print("string result is :"+ result);
+        
+//     }
+// }
+
+
+
+// public class dsa{
+//     public static void main(String[] args) {
+//         
+        
+//     }
+// }
+
+public class Strings{
+    public static void main(String[] args) {
+        Scanner sc =new Scanner(System.in);
+        System.out.println("please enter a email");
+        String str =sc.nextLine();
+        System.out.println("the email is :"+ str);
+        
+        String result ="";
+        for(int i=0; i<str.length(); i++){
+            if(str.charAt(i) == '@'){
+                break;
+            }
+            else{
+                result = result + str.charAt(i);
+            }
+        }
+        System.out.println("the username is :"+ result);
     }
 }
