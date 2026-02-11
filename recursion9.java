@@ -345,3 +345,158 @@ import java.util.*;
 //     }
 // }
 
+
+// 2ND VIDEO QUESTIONS:
+// public class recursion6{
+//     public static void print(String a, int b){
+//         if(b<0){
+//             return;
+//         }
+//         System.out.print(a.charAt(b));
+//         print(a, b-1);
+//     }
+//     public static void main(String[] args) {
+//         Scanner sc =new Scanner(System.in);
+//         String a =sc.nextLine();
+//         int b =a.length()-1;
+//         print(a, b);
+//     }
+// }
+
+
+// public class recursion7{
+//     public static void print(String a, char b, int first, int last, int count){
+//         if(first>(a.length()-1)){
+//             if(count==0 ){
+//                 System.out.println("Element not found");
+//             }
+//             else if(count==1){
+//                 System.out.println("the element is present only 1 time");
+//             }
+//             else if(count>=2){
+//                 System.out.println("the Last index on which element found is :"+ last);
+//             }
+            
+//             return;
+//         }
+        
+//         if(a.charAt(first)==b){
+//             count++;
+//             if(count==1){
+//             System.out.println("The first index on which element found is :"+first);
+//             }
+            
+//             else if(count>1){
+//                 last=first;
+                
+//                 // System.out.println("now last index is :"+ last);
+//             }
+//         }
+        
+//         print(a, b, first+1, last, count);
+//     }
+//     public static void main(String[] args) {
+//         Scanner sc =new Scanner(System.in);
+//         String a =sc.nextLine();
+//         char b ='a';
+//         int first=0;
+//         int last=-1;
+//         int count=0;
+//         print(a, b, first, last, count);
+//     }    
+// }
+
+
+//wrong wrong 
+// public class recursion7{
+//     public static void print(String a, int index, char ch, int first, int last){
+        
+
+//         if(index==a.length()-1){
+//             System.out.println(first);
+//             System.out.println(last);
+//             return;
+//         }
+        
+//         if(a.charAt(index)== ch){
+//             if(first==-1){
+//                 first=index;
+//             }
+//             else{
+//                 last=index;
+//             }
+//         }
+//         print(a, index+1, ch, first, last);
+//     }
+//     public static void main(String args[]){
+//         Scanner sc =new Scanner(System.in);
+//         String a =sc.nextLine();
+//         int index=0;
+//         char ch='a';
+//         int first =-1;
+//         int last=-1;
+//         print(a, index, ch, first, last);
+    
+//     }
+// }
+
+
+
+// public class recursion8{
+//     public static Boolean sorting(int arr[], int i){
+//         if(i>arr.length-2){
+//             return true ;
+//         }
+//         else if(arr[i]>arr[i+1]){
+//             return false;
+//         }
+        
+//         return sorting(arr, i+1);
+//     }
+//     public static void main(String args[]){
+//         Scanner sc =new Scanner(System.in);
+//         int a =sc.nextInt();
+//         int arr[] =new int[a];
+//         for(int i=0; i<arr.length; i++){
+//             arr[i]=sc.nextInt();
+//         }
+//         int i=0;
+//         Boolean result= sorting(arr, i);
+//         if(result==false){
+//             System.out.println("array is not sorted");
+//         }
+//         else{
+//             System.out.println("array is sorted");
+//         }
+//     }
+// }
+
+public class recursion9{
+    public static void print(String s, String str, int i, char ch, int count){
+        if(i==s.length()){
+            
+            for(int j=1; j<=count; j++){
+                str=str+'x';
+            }
+            System.out.println(str);
+            return;
+        }
+        if(s.charAt(i)==ch){
+            count++;
+        
+        }
+        else{
+            str=str+s.charAt(i);
+        }
+        print(s, str, i+1, ch, count);
+    }
+    public static void main(String args[]){
+        Scanner sc =new Scanner(System.in);
+        String s =sc.nextLine();
+        String str="";
+        int index=0;
+        char ch='x';
+        int count=0;
+        print(s, str, index, ch, count);
+    }
+}
