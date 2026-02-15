@@ -471,32 +471,77 @@ import java.util.*;
 //     }
 // }
 
-public class recursion9{
-    public static void print(String s, String str, int i, char ch, int count){
-        if(i==s.length()){
+// public class recursion9{
+//     public static void print(String s, String str, int i, char ch, int count){
+//         if(i==s.length()){
             
-            for(int j=1; j<=count; j++){
-                str=str+'x';
-            }
-            System.out.println(str);
-            return;
-        }
-        if(s.charAt(i)==ch){
-            count++;
+//             for(int j=1; j<=count; j++){
+//                 str=str+'x';
+//             }
+//             System.out.println(str);
+//             return;
+//         }
+//         if(s.charAt(i)==ch){
+//             count++;
         
+//         }
+//         else{
+//             str=str+s.charAt(i);
+//         }
+//         print(s, str, i+1, ch, count);
+//     }
+//     public static void main(String args[]){
+//         Scanner sc =new Scanner(System.in);
+//         String s =sc.nextLine();
+//         String str="";
+//         int index=0;
+//         char ch='x';
+//         int count=0;
+//         print(s, str, index, ch, count);
+//     }
+// }
+
+
+
+// public class recursion9{
+//     public static void movex(String s, int i, String a, int count){
+//         if(i==s.length()){
+//             for(int j=1; j<=count; j++){
+//                 a=a+'x';
+//             }
+//             System.out.println(a);
+//             return;
+//         }
+//         else if(s.charAt(i)=='x'){
+//             count++;
+//         }
+//         else{
+//             a=a+s.charAt(i);
+//         }
+//         movex(s, i+1, a, count);
+//     }
+//     public static void main(String args[]){
+//         Scanner sc =new Scanner(System.in);
+//         String s =sc.nextLine();
+//         String a ="";
+//         int i=0;
+//         int count=0;
+//         movex(s, i, a, count);
+
+//     }
+// }
+
+public class recursion10{
+    public static void remove(String s, int i){
+        if(s.charAt(i)){
+
         }
-        else{
-            str=str+s.charAt(i);
-        }
-        print(s, str, i+1, ch, count);
     }
     public static void main(String args[]){
         Scanner sc =new Scanner(System.in);
         String s =sc.nextLine();
-        String str="";
-        int index=0;
-        char ch='x';
-        int count=0;
-        print(s, str, index, ch, count);
+        int i=0;
+        char arr[]= new char[];
+        remove(s, i);
     }
 }
